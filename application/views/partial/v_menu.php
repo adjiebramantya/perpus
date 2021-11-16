@@ -15,11 +15,11 @@
     <ul class="sidebar-menu" data-widget="tree">
       <li class="header">MAIN NAVIGATION</li>
       <li class="<?=$this->uri->segment(1) == 'dashboard'? 'active' :''?>">
-        <a href="#">
+        <a href="<?= base_url('dashboard')?>">
           <i class="fa fa-dashboard"></i> <span>Dashboard</span>
         </a>
       </li>
-      <li class=""><a href="<?= base_url()?>anggota"><i class="fa fa-user"></i> Data Anggota</a></li>
+      <li class="<?=$this->uri->segment(1) == 'anggota'? 'active' :''?>"><a href="<?= base_url()?>anggota"><i class="fa fa-user"></i> Data Anggota</a></li>
       <li class="treeview <?=$this->uri->segment(1) == 'pengarang'|| $this->uri->segment(1) == 'penerbit' || $this->uri->segment(1) == 'buku' ? 'active' :''?>">
         <a href="#">
           <i class="fa fa-desktop"></i>
