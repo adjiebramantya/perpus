@@ -15,7 +15,7 @@
 
 <div class="box">
   <div class="box-header">
-    <h3 class="box-title">Data Table With Full Features</h3>
+    <h3 class="box-title"><?= $judul ?></h3>
   </div>
   <!-- /.box-header -->
   <div class="box-body">
@@ -31,7 +31,20 @@
       </tr>
       </thead>
       <tbody>
-
+        <?php
+          foreach ($data as $row) { ?>
+            <tr>
+              <td><?= $row->id_anggota?></td>
+              <td><?= $row->nama_anggota?></td>
+              <td><?= $row->jenis_kelamin?></td>
+              <td><?= $row->alamat?></td>
+              <td><?= $row->no_hp?></td>
+              <td>
+                <a href="<?= base_url() ?>anggota/edit/<?= $row->id_anggota;?>" class="btn btn-success btn-xs">Edit</a>
+                <a href="<?= base_url() ?>anggota/hapus/<?= $row->id_anggota;?>" class="btn btn-danger btn-xs" onclick="return confirm('Yakin Ingin Menghapus?');">Hapus</a>
+              </td>
+            </tr>
+        <?php }?>
       </tbody>
       <tfoot>
       <tr>
