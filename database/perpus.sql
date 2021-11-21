@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Waktu pembuatan: 16 Nov 2021 pada 13.20
+-- Waktu pembuatan: 21 Nov 2021 pada 16.03
 -- Versi server: 10.1.39-MariaDB
 -- Versi PHP: 7.3.5
 
@@ -41,10 +41,32 @@ CREATE TABLE `anggota` (
 --
 
 INSERT INTO `anggota` (`id_anggota`, `nama_anggota`, `jenis_kelamin`, `alamat`, `no_hp`) VALUES
-('AG001', 'Adjie', 'Laki-laki', 'Perumnas Ponjen', '082222222222'),
+('AG001', 'Adjie', 'Laki-laki', 'Perumnas Ponjen', '0821111111111'),
 ('AG002', 'Bagus', 'Laki-laki', 'Kencong', '089999999999'),
 ('AG003', 'Layla', 'Perempuan', 'Bagorejo', '081111111111'),
-('AG004', 'Adi', 'Laki-laki', 'Gumukmas', '083333333333');
+('AG004', 'Sudarsini', 'Perempuan', 'JatimPark', '08909090909');
+
+-- --------------------------------------------------------
+
+--
+-- Struktur dari tabel `buku`
+--
+
+CREATE TABLE `buku` (
+  `id_buku` varchar(10) NOT NULL,
+  `id_pengarang` int(11) NOT NULL,
+  `id_penerbit` int(11) NOT NULL,
+  `judul_buku` varchar(50) NOT NULL,
+  `tahun_terbit` int(10) NOT NULL,
+  `jumlah` int(10) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data untuk tabel `buku`
+--
+
+INSERT INTO `buku` (`id_buku`, `id_pengarang`, `id_penerbit`, `judul_buku`, `tahun_terbit`, `jumlah`) VALUES
+('BK0001', 2, 3, 'Algoritma dan Pemrograman', 2020, 60);
 
 -- --------------------------------------------------------
 
@@ -67,6 +89,44 @@ CREATE TABLE `login` (
 INSERT INTO `login` (`id`, `nama`, `username`, `password`, `level`) VALUES
 (1, 'admin', 'admin', '21232f297a57a5a743894a0e4a801fc3', 'administrator');
 
+-- --------------------------------------------------------
+
+--
+-- Struktur dari tabel `penerbit`
+--
+
+CREATE TABLE `penerbit` (
+  `id_penerbit` int(11) NOT NULL,
+  `nama_penerbit` varchar(50) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data untuk tabel `penerbit`
+--
+
+INSERT INTO `penerbit` (`id_penerbit`, `nama_penerbit`) VALUES
+(1, 'Penerbit 1'),
+(3, 'Sumber Kencana');
+
+-- --------------------------------------------------------
+
+--
+-- Struktur dari tabel `pengarang`
+--
+
+CREATE TABLE `pengarang` (
+  `id_pengarang` int(11) NOT NULL,
+  `nama_pengarang` varchar(50) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data untuk tabel `pengarang`
+--
+
+INSERT INTO `pengarang` (`id_pengarang`, `nama_pengarang`) VALUES
+(1, 'Pengarang 1'),
+(2, 'Subarashi');
+
 --
 -- Indexes for dumped tables
 --
@@ -78,10 +138,28 @@ ALTER TABLE `anggota`
   ADD PRIMARY KEY (`id_anggota`);
 
 --
+-- Indeks untuk tabel `buku`
+--
+ALTER TABLE `buku`
+  ADD PRIMARY KEY (`id_buku`);
+
+--
 -- Indeks untuk tabel `login`
 --
 ALTER TABLE `login`
   ADD PRIMARY KEY (`id`);
+
+--
+-- Indeks untuk tabel `penerbit`
+--
+ALTER TABLE `penerbit`
+  ADD PRIMARY KEY (`id_penerbit`);
+
+--
+-- Indeks untuk tabel `pengarang`
+--
+ALTER TABLE `pengarang`
+  ADD PRIMARY KEY (`id_pengarang`);
 
 --
 -- AUTO_INCREMENT untuk tabel yang dibuang
@@ -92,6 +170,18 @@ ALTER TABLE `login`
 --
 ALTER TABLE `login`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
+--
+-- AUTO_INCREMENT untuk tabel `penerbit`
+--
+ALTER TABLE `penerbit`
+  MODIFY `id_penerbit` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+
+--
+-- AUTO_INCREMENT untuk tabel `pengarang`
+--
+ALTER TABLE `pengarang`
+  MODIFY `id_pengarang` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
