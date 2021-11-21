@@ -13,24 +13,24 @@
     </div>
     <!-- /.box-header -->
     <!-- form start -->
-    <form method="POST" action="<?= base_url()?>pengarang/update" class="form-horizontal">
+    <form method="POST" action="<?= base_url()?>penerbit/update" class="form-horizontal">
       <div class="box-body">
         <div class="form-group">
-          <label for="inputEmail3" class="col-sm-2 control-label">ID Pengarang</label>
+          <label for="inputEmail3" class="col-sm-2 control-label">ID Penerbit</label>
           <div class="col-sm-10">
-            <input type="text" name="id_pengarang" class="form-control" value="<?= $data['id_pengarang']?>" readonly>
+            <input type="text" name="id_penerbit" class="form-control" value="<?= $data['id_penerbit']?>" readonly>
           </div>
         </div>
         <div class="form-group">
-          <label for="inputPassword3" class="col-sm-2 control-label">Nama Pengarang</label>
+          <label for="inputPassword3" class="col-sm-2 control-label">Nama Penerbit</label>
           <div class="col-sm-10">
-            <input type="text" name="nama_pengarang" class="form-control" placeholder="Nama Pengarang" value="<?= $data['nama_pengarang']?>" required>
+            <input type="text" name="nama_penerbit" class="form-control" placeholder="Nama Penerbit" value="<?= $data['nama_penerbit']?>" required>
           </div>
         </div>
       </div>
       <!-- /.box-body -->
       <div class="box-footer">
-        <a href="<?= base_url()?>pengarang" class="btn btn-warning pull-left">Batal</a>
+        <a href="<?= base_url()?>penerbit" class="btn btn-warning pull-left">Batal</a>
         <button type="submit" class="btn btn-info pull-right">Update</button>
       </div>
     </form>

@@ -66,7 +66,7 @@
       <!-- /.box-body -->
       <div class="box-footer">
         <a href="<?= base_url()?>anggota" class="btn btn-warning pull-left">Batal</a>
-        <button type="submit" class="btn btn-info pull-right">update</button>
+        <button type="submit" class="btn btn-info pull-right">Update</button>
       </div>
     </form>
   </div>

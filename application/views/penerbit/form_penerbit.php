@@ -13,25 +13,19 @@
     </div>
     <!-- /.box-header -->
     <!-- form start -->
-    <form method="POST" action="<?= base_url()?>pengarang/update" class="form-horizontal">
+    <form method="POST" action="<?= base_url()?>penerbit/simpan" class="form-horizontal">
       <div class="box-body">
         <div class="form-group">
-          <label for="inputEmail3" class="col-sm-2 control-label">ID Pengarang</label>
+          <label for="inputPassword3" class="col-sm-2 control-label">Nama Penerbit</label>
           <div class="col-sm-10">
-            <input type="text" name="id_pengarang" class="form-control" value="<?= $data['id_pengarang']?>" readonly>
-          </div>
-        </div>
-        <div class="form-group">
-          <label for="inputPassword3" class="col-sm-2 control-label">Nama Pengarang</label>
-          <div class="col-sm-10">
-            <input type="text" name="nama_pengarang" class="form-control" placeholder="Nama Pengarang" value="<?= $data['nama_pengarang']?>" required>
+            <input type="text" name="nama_penerbit" class="form-control" placeholder="Nama Penerbit" required>
           </div>
         </div>
       </div>
       <!-- /.box-body -->
       <div class="box-footer">
         <a href="<?= base_url()?>pengarang" class="btn btn-warning pull-left">Batal</a>
-        <button type="submit" class="btn btn-info pull-right">Update</button>
+        <button type="submit" class="btn btn-info pull-right">Simpan</button>
       </div>
     </form>
   </div>

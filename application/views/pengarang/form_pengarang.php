@@ -18,7 +18,7 @@
         <div class="form-group">
           <label for="inputPassword3" class="col-sm-2 control-label">Nama Pengarang</label>
           <div class="col-sm-10">
-            <input type="text" name="nama_pengarang" class="form-control" placeholder="Nama Anggota" required>
+            <input type="text" name="nama_pengarang" class="form-control" placeholder="Nama Penerbit" required>
           </div>
         </div>
       </div>

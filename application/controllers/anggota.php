@@ -40,7 +40,7 @@ class Anggota Extends CI_Controller{
           redirect('anggota');
         }else{
           $this->session->set_flashdata('info','Data Gagal di Simpan');
-          redirect('tambah_anggota');
+          redirect('anggota/tambah_anggota');
         }
     }
 

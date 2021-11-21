@@ -34,7 +34,7 @@ class Pengarang Extends CI_Controller{
         redirect('pengarang');
       }else{
         $this->session->set_flashdata('info','Data Gagal di Simpan');
-        redirect('tambah_pengarang');
+        redirect('pengarang/tambah_pengarang');
       }
   }
 

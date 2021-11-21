@@ -29,9 +29,9 @@
           </span>
         </a>
         <ul class="treeview-menu">
-          <li><a href="<?= base_url()?>pengarang"><i class="fa fa-circle-o"></i> Pengarang</a></li>
-          <li><a href="pages/layout/boxed.html"><i class="fa fa-circle-o"></i> Penerbit</a></li>
-          <li><a href="pages/layout/boxed.html"><i class="fa fa-circle-o"></i> Buku</a></li>
+          <li class="<?=$this->uri->segment(1) == 'pengarang' ? 'active' :''?>"><a href="<?= base_url()?>pengarang"><i class="fa fa-circle-o"></i> Pengarang</a></li>
+          <li class="<?=$this->uri->segment(1) == 'penerbit' ? 'active' :''?>"><a href="<?= base_url()?>penerbit"><i class="fa fa-circle-o"></i> Penerbit</a></li>
+          <li class="<?=$this->uri->segment(1) == 'buku' ? 'active' :''?>"><a href="<?= base_url()?>buku"><i class="fa fa-circle-o"></i> Buku</a></li>
         </ul>
       </li>
       <hr>
