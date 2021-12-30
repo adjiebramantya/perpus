@@ -34,6 +34,19 @@
           <li class="<?=$this->uri->segment(1) == 'buku' ? 'active' :''?>"><a href="<?= base_url()?>buku"><i class="fa fa-circle-o"></i> Buku</a></li>
         </ul>
       </li>
+      <li class="treeview <?=$this->uri->segment(1) == 'transkasi'|| $this->uri->segment(1) == 'peminjaman' || $this->uri->segment(1) == 'pengembalian' ? 'active' :''?>">
+        <a href="#">
+          <i class="fa fa-area-chart"></i>
+          <span>Transkasi</span>
+          <span class="pull-right-container">
+            <i class="fa fa-angle-left pull-right"></i>
+          </span>
+        </a>
+        <ul class="treeview-menu">
+          <li class="<?=$this->uri->segment(1) == 'peminjaman' ? 'active' :''?>"><a href="<?= base_url()?>peminjaman"><i class="fa fa-circle-o"></i> Peminjaman</a></li>
+          <li class="<?=$this->uri->segment(1) == 'pengembalian' ? 'active' :''?>"><a href="<?= base_url()?>pengembalian"><i class="fa fa-circle-o"></i> Pengembalian</a></li>
+        </ul>
+      </li>
       <hr>
       <li><a href="<?= base_url()?>login/logout"><i class="fa fa-sign-out"></i> Log Out</a></li>
     </ul>

@@ -20,6 +20,8 @@
   <link rel="stylesheet" href="<?= base_url()?>assets/bower_components/datatables.net-bs/css/dataTables.bootstrap.min.css">
   <link rel="stylesheet" href="<?= base_url()?>assets/bower_components/select2/dist/css/select2.min.css">
 
+  <script src="<?= base_url()?>assets/bower_components/jquery/dist/jquery.min.js"></script>
+
   <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
   <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
   <!--[if lt IE 9]>
@@ -88,7 +90,7 @@
 </div>
 <!-- ./wrapper -->
 
-<script src="<?= base_url()?>assets/bower_components/jquery/dist/jquery.min.js"></script>
+
 <script src="<?= base_url()?>assets/bower_components/jquery-ui/jquery-ui.min.js"></script>
 <script>
   $.widget.bridge('uibutton', $.ui.button);
